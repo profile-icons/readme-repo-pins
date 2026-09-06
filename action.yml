@@ -38,7 +38,7 @@ inputs:
     description: "Exclude contributed repos not pinned. True or False (empty). Overridden by `repo_names_exclusive`."
     required: false
   is_i18n:
-    description: ""
+    description: "Support repository pin badge and description text translations for multiple i18n locales."
     required: false
   is_nllb:
     description: "Use a larger NLLB model for i18n translations not supported by a faster model. True of False (empty)."
