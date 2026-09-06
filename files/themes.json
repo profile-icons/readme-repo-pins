@@ -78,5 +78,293 @@
       "link": "#88c0d0",
       "danger": "#bf616a"
     }
+  },
+  "ayu": {
+    "light": {
+      "canvas": "#f8f9fa",
+      "border": "#d2d4d8",
+      "text": "#5c6166",
+      "link": "#399ee6",
+      "danger": "#f07171"
+    },
+    "dark": {
+      "canvas": "#0d1017",
+      "border": "#1f2430",
+      "text": "#bfbdb6",
+      "link": "#59c2ff",
+      "danger": "#d95757"
+    }
+  },
+  "catppuccin": {
+    "light": {
+      "canvas": "#eff1f5",
+      "border": "#dce0e8",
+      "text": "#4c4f69",
+      "link": "#1e66f5",
+      "danger": "#d20f39"
+    },
+    "dark": {
+      "canvas": "#1e1e2e",
+      "border": "#45475a",
+      "text": "#cdd6f4",
+      "link": "#89b4fa",
+      "danger": "#f38ba8"
+    }
+  },
+  "cobalt2": {
+    "light": {
+      "canvas": "#ffffff",
+      "border": "#d3dae3",
+      "text": "#193549",
+      "link": "#0066cc",
+      "danger": "#e91e63"
+    },
+    "dark": {
+      "canvas": "#193549",
+      "border": "#2d5a7b",
+      "text": "#ffffff",
+      "link": "#0088ff",
+      "danger": "#ff0088"
+    }
+  },
+  "everforest": {
+    "light": {
+      "canvas": "#fdf6e3",
+      "border": "#e6e2cc",
+      "text": "#5c6a72",
+      "link": "#8da101",
+      "danger": "#f85552"
+    },
+    "dark": {
+      "canvas": "#2d353b",
+      "border": "#3d484d",
+      "text": "#d3c6aa",
+      "link": "#a7c080",
+      "danger": "#e67e80"
+    }
+  },
+  "github_high_contrast": {
+    "light": {
+      "canvas": "#ffffff",
+      "border": "#20252c",
+      "text": "#0e1116",
+      "link": "#0349b4",
+      "danger": "#a0111f"
+    },
+    "dark": {
+      "canvas": "#0a0c10",
+      "border": "#7a828e",
+      "text": "#f0f3f6",
+      "link": "#71b7ff",
+      "danger": "#ff9492"
+    }
+  },
+  "gruvbox": {
+    "light": {
+      "canvas": "#fbf1c7",
+      "border": "#ebdbb2",
+      "text": "#3c3836",
+      "link": "#076678",
+      "danger": "#9d0006"
+    },
+    "dark": {
+      "canvas": "#282828",
+      "border": "#3c3836",
+      "text": "#ebdbb2",
+      "link": "#83a598",
+      "danger": "#fb4934"
+    }
+  },
+  "horizon": {
+    "light": {
+      "canvas": "#fdf0ed",
+      "border": "#fadad1",
+      "text": "#1c1e26",
+      "link": "#1d8991",
+      "danger": "#da103f"
+    },
+    "dark": {
+      "canvas": "#1c1e26",
+      "border": "#2e303e",
+      "text": "#fdf0ed",
+      "link": "#25b2bc",
+      "danger": "#e95678"
+    }
+  },
+  "kanagawa": {
+    "light": {
+      "canvas": "#f2e9de",
+      "border": "#d8cfc4",
+      "text": "#54433a",
+      "link": "#2d4f67",
+      "danger": "#e82424"
+    },
+    "dark": {
+      "canvas": "#1f1f28",
+      "border": "#2a2a37",
+      "text": "#dcd7ba",
+      "link": "#7e9cd8",
+      "danger": "#e82424"
+    }
+  },
+  "material": {
+    "light": {
+      "canvas": "#fafafa",
+      "border": "#e0e0e0",
+      "text": "#263238",
+      "link": "#6182b8",
+      "danger": "#e53935"
+    },
+    "dark": {
+      "canvas": "#263238",
+      "border": "#37474f",
+      "text": "#eeffff",
+      "link": "#82aaff",
+      "danger": "#f07178"
+    }
+  },
+  "monokai": {
+    "light": {
+      "canvas": "#fdf8ec",
+      "border": "#ded6c8",
+      "text": "#292318",
+      "link": "#bf7bff",
+      "danger": "#e54b4b"
+    },
+    "dark": {
+      "canvas": "#272822",
+      "border": "#3e3d32",
+      "text": "#f8f8f2",
+      "link": "#ae81ff",
+      "danger": "#f92672"
+    }
+  },
+  "night_owl": {
+    "light": {
+      "canvas": "#f0f0f0",
+      "border": "#d9d9d9",
+      "text": "#403f53",
+      "link": "#4876d6",
+      "danger": "#de3d3b"
+    },
+    "dark": {
+      "canvas": "#011627",
+      "border": "#1d3b53",
+      "text": "#d6deeb",
+      "link": "#82aaff",
+      "danger": "#ef5350"
+    }
+  },
+  "one_dark": {
+    "light": {
+      "canvas": "#fafafa",
+      "border": "#d7dae0",
+      "text": "#383a42",
+      "link": "#4078f2",
+      "danger": "#e45649"
+    },
+    "dark": {
+      "canvas": "#282c34",
+      "border": "#3e4451",
+      "text": "#abb2bf",
+      "link": "#61afef",
+      "danger": "#e06c75"
+    }
+  },
+  "palenight": {
+    "light": {
+      "canvas": "#fafafa",
+      "border": "#d9dde6",
+      "text": "#292d3e",
+      "link": "#4976eb",
+      "danger": "#e53935"
+    },
+    "dark": {
+      "canvas": "#292d3e",
+      "border": "#3c4055",
+      "text": "#a6accd",
+      "link": "#82aaff",
+      "danger": "#f07178"
+    }
+  },
+  "rose_pine": {
+    "light": {
+      "canvas": "#faf4ed",
+      "border": "#dfdad9",
+      "text": "#575279",
+      "link": "#31748f",
+      "danger": "#b4637a"
+    },
+    "dark": {
+      "canvas": "#191724",
+      "border": "#403d52",
+      "text": "#e0def4",
+      "link": "#9ccfd8",
+      "danger": "#eb6f92"
+    }
+  },
+  "solarized": {
+    "light": {
+      "canvas": "#fdf6e3",
+      "border": "#eee8d5",
+      "text": "#657b83",
+      "link": "#268bd2",
+      "danger": "#dc322f"
+    },
+    "dark": {
+      "canvas": "#002b36",
+      "border": "#073642",
+      "text": "#839496",
+      "link": "#268bd2",
+      "danger": "#dc322f"
+    }
+  },
+  "synthwave_84": {
+    "light": {
+      "canvas": "#fafafa",
+      "border": "#e0e0e0",
+      "text": "#262335",
+      "link": "#00bcd4",
+      "danger": "#f44336"
+    },
+    "dark": {
+      "canvas": "#262335",
+      "border": "#495495",
+      "text": "#ffffff",
+      "link": "#36f9f6",
+      "danger": "#fe4450"
+    }
+  },
+  "tokyo_night": {
+    "light": {
+      "canvas": "#e1e2e7",
+      "border": "#c4c8da",
+      "text": "#273153",
+      "link": "#2e7de9",
+      "danger": "#c94060"
+    },
+    "dark": {
+      "canvas": "#1a1b26",
+      "border": "#292e42",
+      "text": "#c0caf5",
+      "link": "#7aa2f7",
+      "danger": "#f7768e"
+    }
+  },
+  "tomorrow": {
+    "light": {
+      "canvas": "#ffffff",
+      "border": "#d6d6d6",
+      "text": "#4d4d4c",
+      "link": "#4271ae",
+      "danger": "#c82829"
+    },
+    "dark": {
+      "canvas": "#1d1f21",
+      "border": "#373b41",
+      "text": "#c5c8c6",
+      "link": "#81a2be",
+      "danger": "#cc6666"
+    }
   }
 }

@@ -118,7 +118,29 @@ where:
 * `owner/repo` matches the owner/repository names in the URL of a given repository - required `<>`
 * `theme_name` matches any key in `files/themes.json` - required `<>`
 
-> If a theme is unavailable, you can add it to `files/themes.json` - refer [here](https://github.com/profile-icons/readme-repo-pins/issues/1) for more information.
+Available `THEME`:
+* ayu
+* catppuccin
+* cobalt2
+* dracula
+* everforest
+* github
+* github-high-contrast
+* github-soft
+* gruvbox
+* horizon
+* kanagawa
+* material
+* monokai
+* night-owl
+* nord
+* one_dark
+* palenight
+* rose-pine
+* solarized
+* synthwave84
+* tokyo-night
+* tomorrow
 
 > The default `THEME` is `github_soft`
 
