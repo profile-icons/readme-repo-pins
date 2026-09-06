@@ -81,6 +81,9 @@ IS_EXCLUDE_REPOS_CONTRIBUTED: str = environ.get("IS_EXCLUDE_REPOS_CONTRIBUTED", 
 # optional config, independent to other configs, default False
 IS_CONTRIBUTION_STATS: str = environ.get("IS_CONTRIBUTION_STATS", "")
 
+# optional, enable i18n translations, default: False.
+IS_TRANSLATE: str = environ.get("IS_TRANSLATE", "")
+
 # optional, use a larger NLLB model for i18n translations not supported by faster M2M model
 IS_NLLB: str = environ.get("IS_NLLB", "")
 
@@ -184,6 +187,12 @@ def parse_args() -> tuple:
         help="If repository contribution stats (commit add/del changes) are/not included. Default: False.",
     )
     parser.add_argument(
+        "--is-translate",
+        action="store_true",
+        default=True if IS_TRANSLATE else False,
+        help="Enable i18n translations for repository pin text. Default: False.",
+    )
+    parser.add_argument(
         "--is-nllb",
         action="store_true",
         default=True if IS_NLLB else False,
@@ -246,6 +255,7 @@ def parse_args() -> tuple:
         args.not_contributed,
         args.owner,
         args.stats,
+        args.is_translate,
         args.is_nllb,
     )
 

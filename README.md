@@ -7,7 +7,7 @@ Design & display any public & private repository pin visualizations for GitHub u
 * (optional) themes - select from [existing](https://github.com/profile-icons/readme-repo-pins/blob/main/files/themes.json), or [create your own](https://github.com/profile-icons/readme-repo-pins/issues/1)
 * (optional) background imagery - URL or filepath
 * (optional) user contribution statistics 
-* auto i18n translations (using [optimum/m2m100_418M](https://huggingface.co/optimum/m2m100_418M) and [TigreGotico/nllb-200-distilled-600M-onnx](https://huggingface.co/TigreGotico/nllb-200-distilled-600M-onnx))
+* (optional) i18n translations (using [optimum/m2m100_418M](https://huggingface.co/optimum/m2m100_418M) and [TigreGotico/nllb-200-distilled-600M-onnx](https://huggingface.co/TigreGotico/nllb-200-distilled-600M-onnx))
 
 Pins for private repositories automatically link to deployed public Pages if the link is set to the repository.
 
@@ -46,6 +46,7 @@ jobs:
           is_exclude_repos_owned: ${{ secrets.IS_EXCLUDE_REPOS_OWNED }}  # optional
           is_exclude_repos_contributed: ${{ secrets.IS_EXCLUDE_REPOS_CONTRIBUTED }}  # optional
           is_contribution_stats: ${{ secrets.IS_CONTRIBUTION_STATS }}  # optional
+          is_i18n: ${{ secrets.IS_TRANSLATE }}  # optional
           is_nllb: ${{ secrets.IS_NLLB }}  # optional
           hf_token: ${{ secrets.HF_TOKEN }}  # optional
 ```
@@ -125,21 +126,21 @@ Available `THEME`:
 * dracula
 * everforest
 * github
-* github-high-contrast
-* github-soft
+* github_high_contrast
+* github_soft
 * gruvbox
 * horizon
 * kanagawa
 * material
 * monokai
-* night-owl
+* night_owl
 * nord
 * one_dark
 * palenight
-* rose-pine
+* rose_pine
 * solarized
-* synthwave84
-* tokyo-night
+* synthwave_84
+* tokyo_night
 * tomorrow
 
 > The default `THEME` is `github_soft`
@@ -342,6 +343,22 @@ where:
 * `is_stats` is either `true` (any value) or `false` (empty) - optional `[]`
 
 > The default `IS_CONTRIBUTION_STATS` is `false`
+</details>
+
+<details>
+<summary>Translations</summary>
+
+The optional `IS_TRANSLATE` configuration controls whether repository pin badge and description text is i18n translated.
+
+This can be set by creating a [GitHub Action](https://docs.github.com/en/actions) with the following key-value field pairs:
+
+* key: `IS_TRANSLATE`
+* value: `[is_i18n]`
+
+where:
+* `is_i18n` is either `true` (any value) or `false` (empty) - optional `[]`
+
+> The default `IS_TRANSLATE` is `false`
 </details>
 
 <details>

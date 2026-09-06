@@ -2,7 +2,6 @@ from gh_profile_repo_pins.repo_pins_img.repo_pins_img_theme import (
     RepoPinImgTheme,
     ThemeSVG,
 )
-from gh_profile_repo_pins.repo_pins_img.repo_pins_img_i18n import RepoPinImgTranslator
 from gh_profile_repo_pins.repo_pins_img.repo_pins_img_data import RepoPinImgData
 import gh_profile_repo_pins.repo_pins_enum as enums
 
@@ -119,7 +118,10 @@ class RepoPinImg:
     __NARROW_CHARS = set("il!|:;.,`'")
 
     def __init__(
-        self, repo_pin_data: RepoPinImgData, is_nllb_trans: bool = False
+        self,
+        repo_pin_data: RepoPinImgData,
+        is_translate: bool = False,
+        is_nllb_trans: bool = False,
     ) -> None:
         self.__repo_pin_data: RepoPinImgData = repo_pin_data
         self.__repo_pin_theme: dict[enums.RepoPinsImgThemeMode, ThemeSVG] = (
@@ -127,7 +129,13 @@ class RepoPinImg:
                 theme_name=self.__repo_pin_data.theme,
             ).svg_theme
         )
-        self.__repo_pin_translator: RepoPinImgTranslator = RepoPinImgTranslator()
+        self.__repo_pin_translator = None
+        if is_translate:
+            from gh_profile_repo_pins.repo_pins_img.repo_pins_img_i18n import (
+                RepoPinImgTranslator,
+            )
+
+            self.__repo_pin_translator = RepoPinImgTranslator()
         self.__is_nllb_trans: bool = is_nllb_trans
         self.__svg_str: str = ""
 
@@ -294,6 +302,16 @@ class RepoPinImg:
         badge_w: float | int,
         badge_txt: str,
     ) -> str:
+        if self.__repo_pin_translator is None:
+            return self.__badge(
+                badge_x=badge_x,
+                badge_y=badge_y,
+                badge_h=badge_h,
+                font_size=font_size,
+                badge_w=badge_w,
+                badge_txt=badge_txt,
+            )
+
         svg_switch: str = "<switch>"
         for lang, translated_badge_text in self.__repo_pin_translator.translate_all(
             input_txt=badge_txt, is_nllb_trans=self.__is_nllb_trans
@@ -457,6 +475,13 @@ class RepoPinImg:
         description_y: float | int,
         description_h: float | int,
     ) -> str:
+        if self.__repo_pin_translator is None:
+            return self.__description(
+                description_txt=description_txt,
+                description_y=description_y,
+                description_h=description_h,
+            )
+
         multi_lang_descriptions: dict[str, str] = (
             self.__repo_pin_translator.translate_all(
                 input_txt=description_txt, is_nllb_trans=self.__is_nllb_trans

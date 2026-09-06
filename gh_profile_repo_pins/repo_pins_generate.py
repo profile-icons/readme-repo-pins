@@ -24,10 +24,12 @@ class GenerateRepoPins:
         is_org: bool,
         theme: str | dict | None,
         bg_img: dict | str | None = None,
+        is_translate: bool = False,
         is_nllb_trans: bool = False,
     ) -> None:
         self.__log: Logger = get_logger()
         self.update_themes()  # update the database with any new json themes not in enums.RepoPinsImgThemeName
+        self.__is_translate: bool = is_translate
         self.__is_nllb_trans: bool = is_nllb_trans
         self.__is_org: bool = is_org
 
@@ -107,7 +109,9 @@ class GenerateRepoPins:
                     msg=f"Render repo pins progress: {(i / len(self.__repo_pins) * 100):.2f}% ({i}/{len(self.__repo_pins)})"
                 )
             repo_pin_img: RepoPinImg = RepoPinImg(
-                repo_pin_data=repo_pin, is_nllb_trans=self.__is_nllb_trans
+                repo_pin_data=repo_pin,
+                is_translate=self.__is_translate,
+                is_nllb_trans=self.__is_nllb_trans,
             )
             repo_pin_img.render()
             write_svg(svg_obj_str=repo_pin_img.svg, file_name=str(i))
